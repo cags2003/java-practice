@@ -22,10 +22,7 @@ public class Main {
         System.out.println(isOdd(0));
         System.out.println(isOdd(-3));
 
-        Application a = new Application();
-        a.companyName = "Acme";
-        a.jobTitle = "Junior Developer";
+        Application a = new Application("Acme","Junior Developer");
         System.out.println("He works at " + a.companyName + " his job is " + a.jobTitle);
-
     }
 }
