@@ -23,11 +23,15 @@ public class Main {
         System.out.println(isOdd(-3));
 
         Application a = new Application("Acme", "Junior Developer");
-        a.setJobTitle(null);
-        if (a.getJobTitle() == null || a.getJobTitle().isEmpty()) {
-            System.out.println("please enter your job title");
-        } else {
-            System.out.println("He works at " + a.getCompanyName() + " his job is " + a.getJobTitle());
+        try {
+            try {
+                a.setJobTitle("Senior Developer");
+                System.out.println("He works at " + a.getCompanyName() + " his job is " + a.getJobTitle());
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
