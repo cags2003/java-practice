@@ -1,4 +1,3 @@
-
 public class Main {
 
     public static boolean isEven(int number) {
@@ -22,5 +21,11 @@ public class Main {
         System.out.println(isOdd(7));
         System.out.println(isOdd(0));
         System.out.println(isOdd(-3));
+
+        Application a = new Application();
+        a.companyName = "Acme";
+        a.jobTitle = "Junior Developer";
+        System.out.println("He works at " + a.companyName + " his job is " + a.jobTitle);
+
     }
 }
